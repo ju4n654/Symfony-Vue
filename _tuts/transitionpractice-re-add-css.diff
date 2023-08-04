@@ -1,0 +1,13 @@
+diff --git a/assets/pages/shopping-cart.vue b/assets/pages/shopping-cart.vue
+index 03ce99fb..b2264bca 100644
+--- a/assets/pages/shopping-cart.vue
++++ b/assets/pages/shopping-cart.vue
+@@ -169,7 +169,7 @@ export default {
+     }
+ 
+     .transition-testing {
+-        /*transition: opacity 3s;*/
++        transition: opacity 3s;
+     }
+     .transition-testing.hidden {
+         opacity: 0;

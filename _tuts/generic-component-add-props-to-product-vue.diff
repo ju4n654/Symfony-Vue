@@ -1,0 +1,35 @@
+diff --git a/assets/components/product-show.vue b/assets/components/product-show.vue
+index e7ba09ea..ef2e83af 100644
+--- a/assets/components/product-show.vue
++++ b/assets/components/product-show.vue
+@@ -1,11 +1,17 @@
+ <template>
+     <div>
+-        I'd ❤️ to see a Product here!
++        I'd ❤️ to see Product {{ productId }} here!
+     </div>
+ </template>
+ 
+ <script>
+ export default {
+     name: 'ProductShow',
++    props: {
++        productId: {
++            type: String,
++            required: true,
++        },
++    },
+ };
+ </script>
+diff --git a/assets/pages/products.vue b/assets/pages/products.vue
+index 97df2fa4..00a83fd7 100644
+--- a/assets/pages/products.vue
++++ b/assets/pages/products.vue
+@@ -15,6 +15,7 @@
+                     :is="currentComponent"
+                     :current-category-id="currentCategoryId"
+                     :categories="categories"
++                    :product-id="currentProductId"
+                 />
+             </div>
+         </div>

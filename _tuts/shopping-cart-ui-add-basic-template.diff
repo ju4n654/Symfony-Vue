@@ -1,0 +1,13 @@
+diff --git a/assets/components/shopping-cart/cart-item.vue b/assets/components/shopping-cart/cart-item.vue
+index 041f22ef..10260b34 100644
+--- a/assets/components/shopping-cart/cart-item.vue
++++ b/assets/components/shopping-cart/cart-item.vue
+@@ -1,5 +1,7 @@
+ <template>
+-
++    <div :class="[$style.component, 'row', 'p-3']">
++        {{ item.product.name }}
++    </div>
+ </template>
+ 
+ <script>

@@ -1,0 +1,14 @@
+diff --git a/assets/pages/products.vue b/assets/pages/products.vue
+index e800a6e1..e3e02195 100644
+--- a/assets/pages/products.vue
++++ b/assets/pages/products.vue
+@@ -54,6 +54,9 @@ export default {
+         currentProductId() {
+             return getCurrentProductId();
+         },
++        currentComponent() {
++            return this.currentProductId !== null ? ProductShow : Catalog;
++        },
+     },
+     async created() {
+         const response = await fetchCategories();

@@ -1,0 +1,20 @@
+diff --git a/assets/components/checkout/index.vue b/assets/components/checkout/index.vue
+index 3379a44b..1dbb2c03 100644
+--- a/assets/components/checkout/index.vue
++++ b/assets/components/checkout/index.vue
+@@ -103,7 +103,14 @@ export default {
+                 customerCity: '',
+                 customerPhone: '',
+             },
+-            validationErrors: {},
++            validationErrors: {
++                customerName: null,
++                customerEmail: null,
++                customerAddress: null,
++                customerZip: null,
++                customerCity: null,
++                customerPhone: null,
++            },
+             loading: false,
+             serverError: false,
+         };

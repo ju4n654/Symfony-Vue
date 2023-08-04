@@ -1,0 +1,17 @@
+diff --git a/assets/components/shopping-cart/cart-item.vue b/assets/components/shopping-cart/cart-item.vue
+index 101d76a6..85618132 100644
+--- a/assets/components/shopping-cart/cart-item.vue
++++ b/assets/components/shopping-cart/cart-item.vue
+@@ -7,6 +7,12 @@
+ <script>
+ export default {
+     name: 'ShoppingCartItem',
++    props: {
++        item: {
++            type: Object,
++            required: true,
++        },
++    },
+ };
+ </script>
+ 

@@ -1,0 +1,31 @@
+diff --git a/assets/components/shopping-cart/cart-sidebar.vue b/assets/components/shopping-cart/cart-sidebar.vue
+index bd68d320..5ec4b4ac 100644
+--- a/assets/components/shopping-cart/cart-sidebar.vue
++++ b/assets/components/shopping-cart/cart-sidebar.vue
+@@ -16,15 +16,26 @@
+ 
+                 ${{ price }}
+             </h6>
++
++            <cart-add-controls
++                :product="featuredProduct"
++                :add-to-cart-loading="false"
++                :add-to-cart-success="false"
++                :allow-add-to-cart="false"
++            />
+         </div>
+     </div>
+ </template>
+ 
+ <script>
+ import formatPrice from '@/helpers/format-price';
++import CartAddControls from '@/components/product-show/cart-add-controls';
+ 
+ export default {
+     name: 'ShoppingCartSidebar',
++    components: {
++        CartAddControls,
++    },
+     props: {
+         featuredProduct: {
+             type: Object,

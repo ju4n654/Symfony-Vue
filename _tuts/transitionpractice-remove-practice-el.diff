@@ -1,0 +1,19 @@
+diff --git a/assets/pages/shopping-cart.vue b/assets/pages/shopping-cart.vue
+index 78ce8884..4f2c77b6 100644
+--- a/assets/pages/shopping-cart.vue
++++ b/assets/pages/shopping-cart.vue
+@@ -46,14 +46,6 @@
+                             {{ buttonText }}
+                         </button>
+                     </div>
+-
+-                    <transition name="fade">
+-                        <div
+-                            v-show="currentState === 'cart'"
+-                        >
+-                            Testing transitions!
+-                        </div>
+-                    </transition>
+                 </div>
+             </div>
+         </div>

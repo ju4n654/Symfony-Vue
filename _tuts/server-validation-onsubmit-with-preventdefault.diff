@@ -1,0 +1,14 @@
+diff --git a/assets/components/checkout/index.vue b/assets/components/checkout/index.vue
+index 285b6080..e97e9764 100644
+--- a/assets/components/checkout/index.vue
++++ b/assets/components/checkout/index.vue
+@@ -106,7 +106,8 @@ export default {
+                 errorMessage: this.validationErrors[id],
+             };
+         },
+-        async onSubmit() {
++        async onSubmit(event) {
++            event.preventDefault();
+             this.loading = true;
+ 
+             try {

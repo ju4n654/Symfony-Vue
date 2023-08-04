@@ -1,0 +1,20 @@
+diff --git a/assets/mixins/get-shopping-cart.js b/assets/mixins/get-shopping-cart.js
+new file mode 100644
+index 00000000..af917eaf
+--- /dev/null
++++ b/assets/mixins/get-shopping-cart.js
+@@ -0,0 +1,14 @@
++import { fetchCart } from '@/services/cart-service';
++
++export default {
++    data() {
++        return {
++            cart: null,
++        };
++    },
++    async created() {
++        fetchCart().then((cart) => {
++            this.cart = cart;
++        });
++    },
++};

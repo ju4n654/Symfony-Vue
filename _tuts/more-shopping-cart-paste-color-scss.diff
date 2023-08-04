@@ -1,0 +1,20 @@
+diff --git a/assets/components/shopping-cart/cart-item.vue b/assets/components/shopping-cart/cart-item.vue
+index 3003b989..e6efba24 100644
+--- a/assets/components/shopping-cart/cart-item.vue
++++ b/assets/components/shopping-cart/cart-item.vue
+@@ -27,7 +27,14 @@ export default {
+ <style lang="scss" module>
+ @import '~styles/variables/colors.scss';
+ 
+-.component {
++.component :global {
+     border-bottom: 1px solid $light-component-border;
++
++    .color-square {
++        display: inline-block;
++        width: 25px;
++        height: 25px;
++        border-radius: 4px;
++    }
+ }
+ </style>

@@ -1,0 +1,19 @@
+diff --git a/assets/pages/shopping-cart.vue b/assets/pages/shopping-cart.vue
+index e85db230..a66880c2 100644
+--- a/assets/pages/shopping-cart.vue
++++ b/assets/pages/shopping-cart.vue
+@@ -86,8 +86,12 @@ export default {
+         },
+     },
+     watch: {
+-        async cart() {
+-            this.loadProducts();
++        cart: {
++            deep: true,
++
++            handler() {
++                this.loadProducts();
++            },
+         },
+     },
+     async created() {
